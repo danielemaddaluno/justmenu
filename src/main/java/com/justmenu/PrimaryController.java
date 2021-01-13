@@ -2,7 +2,6 @@ package com.justmenu;
 
 import java.io.IOException;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.MenuBar;
@@ -62,7 +61,7 @@ public class PrimaryController {
 
 	@FXML
 	private void openAbout() throws IOException {
-		App.setRoot("about");
+		System.out.println("about");
 	}
 
 	@FXML
