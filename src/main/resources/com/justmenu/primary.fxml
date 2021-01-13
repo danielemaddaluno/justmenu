@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.justmenu.PrimaryController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="1276.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Alerts">
+            <items>
+                  <CheckMenuItem fx:id="checkMenuItem1min" mnemonicParsing="false" onAction="#checkMenuItemClick" selected="true" text="1 min before" />
+                  <CheckMenuItem fx:id="checkMenuItem5min" mnemonicParsing="false" onAction="#checkMenuItemClick" selected="true" text="5 min before" />
+                  <CheckMenuItem fx:id="checkMenuItem10min" mnemonicParsing="false" onAction="#checkMenuItemClick" text="10 min before" />
+                  <CheckMenuItem fx:id="checkMenuItem15min" mnemonicParsing="false" onAction="#checkMenuItemClick" text="15 min before" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Sounds">
+              <items>
+                  <RadioMenuItem fx:id="radioMenuItemSoundVoice" mnemonicParsing="false" onAction="#radioMenuItemClick" selected="true" text="Voice TTS">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="soundsGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="radioMenuItemSoundDing" mnemonicParsing="false" onAction="#radioMenuItemClick" text="Ding" toggleGroup="$soundsGroup" />
+                  <RadioMenuItem fx:id="radioMenuItemSoundNone" mnemonicParsing="false" onAction="#radioMenuItemClick" text="None" toggleGroup="$soundsGroup" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Clock Strike">
+               <items>
+                  <RadioMenuItem fx:id="radioMenuItemClockStrikeNone" mnemonicParsing="false" onAction="#radioMenuItemClick" text="None">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="clockStrikeGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="radioMenuItemClockStrike15min" mnemonicParsing="false" onAction="#radioMenuItemClick" text="15 min" toggleGroup="$clockStrikeGroup" />
+                  <RadioMenuItem fx:id="radioMenuItemClockStrike30min" mnemonicParsing="false" onAction="#radioMenuItemClick" text="30 min" toggleGroup="$clockStrikeGroup" />
+                  <RadioMenuItem fx:id="radioMenuItemClockStrike60min" mnemonicParsing="false" onAction="#radioMenuItemClick" selected="true" text="60 min" toggleGroup="$clockStrikeGroup" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#openAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <Text layoutX="555.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="73.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
